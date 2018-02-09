@@ -9,3 +9,5 @@ It can be tested using ripple-emulator.
 1. In the www folder type `ripple emulate`
 
 It can be built with phonegap build using [these instructions](https://pointdeveloper.com/how-to-build-ionic-app-with-phonegap-build/)
+
+Generate a key using [these instructions](https://coderwall.com/p/r09hoq/android-generate-release-debug-keystores)
