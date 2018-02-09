@@ -11,3 +11,5 @@ It can be tested using ripple-emulator.
 It can be built with phonegap build using [these instructions](https://pointdeveloper.com/how-to-build-ionic-app-with-phonegap-build/)
 
 Generate a key using [these instructions](https://coderwall.com/p/r09hoq/android-generate-release-debug-keystores)
+
+![This is what I typed](https://rhildred.github.io/ionicwebdb/readmeimages/KeytoolCapture.PNG "What I typed")
