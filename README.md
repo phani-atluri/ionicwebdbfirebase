@@ -1,5 +1,5 @@
 # <a href="https://github.com/rhildred/ionicwebdb" target="_blank">ionicwebdb</a>
-websql with ionic
+Websql todo list with ionic.
 
 This was started using <a href="https://ionicframework.com/docs/v1/getting-started/" target="_blank">these instructions.</a>
 
