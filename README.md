@@ -12,4 +12,6 @@ It can be built with phonegap build using [these instructions](https://pointdeve
 
 Generate a key using [these instructions](https://coderwall.com/p/r09hoq/android-generate-release-debug-keystores)
 
+`keytool -genkey -v -keystore rhildred.github.io.keystore -alias rhildred.github.io -keyalg RSA -keysize 2048 -validity 10000`
+
 ![This is what I typed](https://rhildred.github.io/ionicwebdb/readmeimages/KeytoolCapture.PNG "What I typed")
