@@ -20,4 +20,4 @@ Generate a key using [these instructions](https://coderwall.com/p/r09hoq/android
 
 ## Firstly the number of things that have been built with ionic
 
-[![ionic showcase](https://rhildred.github.io/ionicwebdb/readmeimages/FireShot Capture 1 - Ionic app showcase - Ionic F_ - https___showcase.ionicframework.com_apps_newest.png "ionic showcase")](https://showcase.ionicframework.com/apps/newest)
+[![ionic showcase](Ionic_app_showcase.png "ionic showcase")](https://showcase.ionicframework.com/apps/newest)
