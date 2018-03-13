@@ -15,3 +15,9 @@ Generate a key using [these instructions](https://coderwall.com/p/r09hoq/android
 `keytool -genkey -v -keystore rhildred.github.io.keystore -alias rhildred.github.io -keyalg RSA -keysize 2048 -validity 10000`
 
 ![This is what I typed](https://rhildred.github.io/ionicwebdb/readmeimages/KeytoolCapture.PNG "What I typed")
+
+# There is a lot that can be learned from this
+
+## Firstly the number of things that have been built with ionic
+
+<iframe src="https://showcase.ionicframework.com/apps/archive" style="max-width: 100vw;max-height:80vh;overflow: scroll;"></iframe>
