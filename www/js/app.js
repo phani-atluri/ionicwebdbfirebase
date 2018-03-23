@@ -3,11 +3,39 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('todoapp', ['ionic'])
+angular.module('todoapp', ['ionic', 'firebase'])
 
-.controller('todoctrl', function($scope, $http) {
+.controller('todoctrl', function($scope, $http, $firebaseArray) {
   $scope.model={};
   $scope.todos = [];
+
+  // bind to firebase
+  $scope.sKey = localStorage.getItem("sMD5");
+  alert($scope.sKey);
+  if($scope.sKey != null){
+      $scope.initializeFirebase();
+  }
+  $scope.initializeStorage = function(){
+      localStorage.setItem("sMD5", $scope.model.uname + $scope.model.password);
+      $scope.sKey = localStorage.getItem("sMD5");
+      $scope.initializeFirebase();
+  }
+  $scope.initializeFirebase = function(){
+    var ref = new Firebase("https://march20prog8110.firebaseio.com/tasks/"+ $scope.sKey + "/");
+    $scope.firebasemessages = $firebaseArray(ref);
+    $scope.firebasemessages.$loaded()
+    .then(function (x) {
+        //we should have data
+        alert(JSON.stringify($scope.firebasemessages));
+        $scope.firebasemessages.$add({name:"Fred", email:"Fred@Flintstone.com"});
+    })
+    .catch(function (error) {
+        //no data
+        console.log("Working offline " + error)
+    });
+  
+  }
+
   var dbSize = 5 * 1024 * 1024; // 5MB
   /// open database
   var db = openDatabase("Todo", "1", "Todo manager", dbSize);
