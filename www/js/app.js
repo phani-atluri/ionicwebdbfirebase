@@ -19,6 +19,12 @@ angular.module('todoapp', ['ionic', 'firebase'])
         $scope.initializeFirebase = function () {
             var ref = new Firebase("https://march20prog8110.firebaseio.com/tasks/" + $scope.sKey + "/");
             $scope.firebasemessages = $firebaseObject(ref);
+            $scope.firebasemessages.$loaded().then(function(){
+                $scope.readTodos();
+            }).catch(function(err){
+                console.log(err);
+                $scope.readTodos();
+            });
 
         }
         $scope.sKey = localStorage.getItem("sMD5");
@@ -35,7 +41,7 @@ angular.module('todoapp', ['ionic', 'firebase'])
                 "todo(ID TEXT PRIMARY KEY, todo TEXT, added_on DATETIME, finished_on DATETIME, deleted_on DATETIME)", [],
                 function () {
                     console.log("success");
-                    $scope.readTodos();
+                    //$scope.readTodos();
                 },
                 function () { console.log("failure") }
             );
